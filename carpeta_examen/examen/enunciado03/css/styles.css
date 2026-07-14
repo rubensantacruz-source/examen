@@ -1,0 +1,55 @@
+/* ==========================================================
+   ENUNCIADO 03 - Barra de Navegación Horizontal Adaptable con Flexbox
+   ========================================================== */
+
+/* Reset inicial */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* ---------------- Barra de navegación ---------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 15px 30px;
+  color: #fff;
+}
+
+.navbar .logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* ---------------- Lista de enlaces ---------------- */
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+/* ---------------- Estilos e interacción del menú ---------------- */
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: #007BFF;
+}
