@@ -3,157 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Índice del Examen Práctico N° 2 con acceso a los tres enunciados.">
     <title>Examen Práctico N° 2</title>
-
     <style>
-
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
+        * { box-sizing: border-box; }
+        html, body { margin: 0; min-height: 100%; }
+        body {
+            min-height: 100vh;
+            padding: 24px;
+            background: #fff;
+            color: #111;
             font-family: "Segoe UI", Arial, sans-serif;
+            display: grid;
+            place-items: center;
         }
-
-        body{
-            background:white;
-            height:100vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
+        .contenedor {
+            width: min(700px, 100%);
+            padding: clamp(28px, 6vw, 50px);
+            background: #fff;
+            border: 2px solid #111;
+            text-align: center;
         }
-
-        .contenedor{
-
-            width:700px;
-            padding:50px;
-
-            background:white;
-
-            border:2px solid black;
-
-            text-align:center;
-
-            position:relative;
+        .linea { width: 100%; height: 2px; background: #111; margin: 20px 0 35px; }
+        h1 { margin: 0; font-size: clamp(26px, 5vw, 32px); letter-spacing: 2px; }
+        p { line-height: 1.6; }
+        .botones {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 40px;
         }
-
-
-        .linea{
-            width:100%;
-            height:2px;
-            background:black;
-            margin:20px 0 35px;
+        a {
+            display: block;
+            padding: 15px 10px;
+            text-decoration: none;
+            color: #111;
+            border: 2px solid #111;
+            background: #fff;
+            transition: .2s ease;
+            font-weight: 700;
         }
-
-
-        h1{
-
-            font-size:32px;
-            letter-spacing:2px;
-            color:#111;
-
+        a:hover, a:focus-visible { background: #111; color: #fff; }
+        a:focus-visible { outline: 3px solid #555; outline-offset: 3px; }
+        footer { margin-top: 40px; font-size: 14px; color: #555; }
+        @media (max-width: 600px) {
+            .botones { grid-template-columns: 1fr; }
         }
-
-
-        .botones{
-
-            display:flex;
-            justify-content:center;
-            gap:25px;
-            margin-top:40px;
-
-        }
-
-
-        a{
-
-            width:160px;
-
-            padding:15px 10px;
-
-            text-decoration:none;
-
-            color:black;
-
-            border:2px solid black;
-
-            background:white;
-
-            transition:.3s;
-
-            font-weight:bold;
-
-        }
-
-
-        a:hover{
-
-            background:black;
-            color:white;
-
-        }
-
-
-        footer{
-
-            margin-top:40px;
-
-            font-size:14px;
-
-            color:#555;
-
-        }
-
-
     </style>
-
 </head>
-
-
 <body>
-
-
-<div class="contenedor">
-
-
-    <h1>EXAMEN PRÁCTICO N° 2</h1>
-
-
-    <div class="linea"></div>
-
-
-    <p>
-        Seleccione el ejercicio que desea visualizar
-    </p>
-
-
-    <div class="botones">
-
-
-        <a href="examen/enunciado01/enunciado1.html">
-            ENUNCIADO 01
-        </a>
-
-
-        <a href="examen/enunciado02/enunciado2.html">
-            ENUNCIADO 02
-        </a>
-
-
-        <a href="examen/enunciado03/enunciado3.html">
-            ENUNCIADO 03
-        </a>
-
-
-    </div>
-
-
-    <footer>
-        Diseño Web - Examen Práctico
-    </footer>
-
-
-</div>
-
-
+    <main class="contenedor">
+        <h1>EXAMEN PRÁCTICO N° 2</h1>
+        <div class="linea" aria-hidden="true"></div>
+        <p>Seleccione el ejercicio que desea visualizar</p>
+        <nav class="botones" aria-label="Enunciados del examen">
+            <a href="examen/enunciado01/enunciado1.html">ENUNCIADO 01</a>
+            <a href="examen/enunciado02/enunciado2.html">ENUNCIADO 02</a>
+            <a href="examen/enunciado03/enunciado3.html">ENUNCIADO 03</a>
+        </nav>
+        <footer>Diseño Web - Examen Práctico</footer>
+    </main>
 </body>
 </html>
